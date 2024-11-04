@@ -16,3 +16,12 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# OpenAPI
+.openapi*
+openapitools*
+package.json*
+package-lock.json
+
+node_modules/
+var/tmp/*

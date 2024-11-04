@@ -1,0 +1,88 @@
+openapi: 3.1.0
+info:
+  title: GitHub API Wrapper
+  description: A GitHub API Wrapper with custom endpoints
+  version: 1.0.0
+paths:
+  /hello:
+    get:
+      summary: Returns a hello message
+      responses:
+        '200':
+          description: A hello message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Hello, World!"
+  
+  /github:
+    get:
+      summary: Returns a message
+      responses:
+        '200':
+          description: A message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Hello, GitHub!"
+
+  /github/create-repository:
+    post:
+      summary: Create a new repository
+      description: This endpoint allows you to create a new repository by providing repo details in JSON format.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                org:
+                  type: string
+                  description: The name of the organization.
+                  example: "boxboat"
+                name:
+                  type: string
+                  description: The repository name.
+                  example: "demo-repo"
+                visibility:
+                  type: string
+                  description: The visibility of the repository.
+                  example: "internal"
+              required:
+                - org
+                - name
+      responses:
+        '201':
+          description: Repository created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: The unique identifier for the repository.
+                    example: "12345"
+                  message:
+                    type: string
+                    example: "Repository created successfully."
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Invalid repository data."
+
