@@ -1,4 +1,4 @@
-package githubapiserver;
+package com.example;
 
 import lombok.Data;
 @Data

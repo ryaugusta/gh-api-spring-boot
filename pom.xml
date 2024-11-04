@@ -81,7 +81,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>githubapiserver.GitHubApiServerApplication</mainClass>
+                    <mainClass>com.example.GitHubApiServerApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

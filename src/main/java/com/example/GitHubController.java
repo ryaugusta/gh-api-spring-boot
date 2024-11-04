@@ -1,4 +1,4 @@
-package githubapiserver;
+package com.example;
 
 import org.kohsuke.github.GHCreateRepositoryBuilder;
 import org.kohsuke.github.GHRepository;
