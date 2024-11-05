@@ -6,6 +6,16 @@ Custom GH API endpoints with Spring Boot
 
 Clone this repository!
 
+### Prerequisites
+
+Update the `application.properties` file with your GitHub API token.
+
+```properties
+server.port=8080
+github.token=ghp_xxx
+...
+```
+
 ### Run the following commands
 
 ```bash
