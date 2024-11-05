@@ -18,3 +18,7 @@ mvn clean install
 # run the application
 mvn spring-boot:run
 ```
+
+### Access
+
+access via: http://localhost:8080/swagger-ui.html
